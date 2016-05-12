@@ -7,55 +7,55 @@ JETTY_URL=http://download.eclipse.org/jetty/stable-9/dist/jetty-distribution-9.3
 MAVEN_URL=http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip
 
 #java8 install
-#add-apt-repository -y ppa:webupd8team/java
-#apt-get update
-#apt-get -y install oracle-java8-installer
+add-apt-repository -y ppa:webupd8team/java
+apt-get update
+apt-get -y install oracle-java8-installer
 
 #git
-#apt-get -y install git
+apt-get -y install git
 
 #npm, bower, gulp, http-server
-#apt-get -y install npm
-#npm install -g bower
-#npm install -g gulp
-#npm install -g http-server
-#ln -s /usr/bin/nodejs /usr/bin/node 
+apt-get -y install npm
+npm install -g bower
+npm install -g gulp
+npm install -g http-server
+ln -s /usr/bin/nodejs /usr/bin/node 
 
 #Idea
-#cd /opt
-#wget $IDEA_URL
+cd /opt
+wget $IDEA_URL
 IDEA_FILE=$(basename $IDEA_URL)
-#tar -xzf $IDEA_FILE 
-#rm $IDEA_FILE
+tar -xzf $IDEA_FILE 
+rm $IDEA_FILE
 
 #tomcat
-#cd /opt
-#wget $TOMCAT_URL
+cd /opt
+wget $TOMCAT_URL
 TOMCAT_FILE=$(basename $TOMCAT_URL)
-#unzip $TOMCAT_FILE
-#rm $TOMCAT_FILE 
+unzip $TOMCAT_FILE
+rm $TOMCAT_FILE 
 
 #jetty
-#cd /opt
-#wget $JETTY_URL
+cd /opt
+wget $JETTY_URL
 JETTY_FILE=$(basename $JETTY_URL)
-#unzip $JETTY_FILE
-#rm $JETTY_FILE
+unzip $JETTY_FILE
+rm $JETTY_FILE
 
 #maven
-#cd /opt
-#wget $MAVEN_URL
+cd /opt
+wget $MAVEN_URL
 MAVEN_FILE=$(basename $MAVEN_URL)
-#unzip $MAVEN_FILE
-#rm $MAVEN_FILE
+unzip $MAVEN_FILE
+rm $MAVEN_FILE
 MAVEN_HOME=/opt/${MAVEN_FILE:0:-8}
 
-#echo "MAVEN_HOME=$MAVEN_HOME" >> /etc/environment
-#echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> /etc/environment
-#source /etc/environment
+echo "MAVEN_HOME=$MAVEN_HOME" >> /etc/environment
+echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> /etc/environment
+source /etc/environment
 
 #browser
-#apt-get install chromium-browser
+apt-get install chromium-browser
 
 #changing keyboard layout (os freya bug)
-gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
+#gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
