@@ -6,6 +6,9 @@ TOMCAT_URL=http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.0.M4/bin/
 JETTY_URL=http://download.eclipse.org/jetty/stable-9/dist/jetty-distribution-9.3.8.v20160314.zip
 MAVEN_URL=http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip
 
+#path scripts (/ect/profile.d/..)
+MAVEN_PATH_SCRIPT=/etc/profile.d/mvn.sh
+
 #java8 install
 add-apt-repository -y ppa:webupd8team/java
 apt-get update
@@ -50,9 +53,9 @@ unzip $MAVEN_FILE
 rm $MAVEN_FILE
 MAVEN_HOME=/opt/${MAVEN_FILE:0:-8}
 
-echo "MAVEN_HOME=$MAVEN_HOME" >> /etc/profile.d/mvn.sh
-echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> /etc/profile.d/mvn.sh
-echo "export PATH"
+echo "MAVEN_HOME=$MAVEN_HOME" >> $MAVEN_PATH_SCRIPT
+echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> $MAVEN_PATH_SCRIPT
+echo "export PATH" >> $MAVEN_PATH_SCRIPT
 source /etc/profile
 
 #browser
