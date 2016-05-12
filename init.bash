@@ -66,7 +66,7 @@ apt-get -y install chromium-browser
 apt-get -y install keepassx
 
 #dropbox
-apt-get -y nautilus-dropbox
+apt-get -y install nautilus-dropbox
 
 #libreoffice write
 apt-get -y install libreoffice-writer
