@@ -5,6 +5,7 @@ IDEA_URL=https://download.jetbrains.com/idea/ideaIU-2016.1.2.tar.gz
 TOMCAT_URL=http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.0.M4/bin/apache-tomcat-9.0.0.M4.zip
 JETTY_URL=http://download.eclipse.org/jetty/stable-9/dist/jetty-distribution-9.3.8.v20160314.zip
 MAVEN_URL=http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip
+SKYPE_URL=https://get.skype.com/go/getskype-linux-beta-ubuntu-64
 
 #path scripts (/ect/profile.d/..)
 MAVEN_PATH_SCRIPT=/etc/profile.d/mvn.sh
@@ -79,7 +80,10 @@ apt-get -y install libreoffice-calc
 #krita (graph editor)
 apt-get -y install krita
 
-
+#skype
+wget $SKYPE_URL
+SKYPE_FILE=$(basename $SKYPE_URL)
+dpkg -i $SKYPE_FILE
 
 #changing keyboard layout (os freya bug)
 gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
