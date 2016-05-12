@@ -67,5 +67,8 @@ apt-get -y install keepassx
 #dropbox
 apt-get -y nautilus-dropbox
 
+#libreoffice write
+apt-get -y install libreoffice-write
+
 #changing keyboard layout (os freya bug)
 gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
