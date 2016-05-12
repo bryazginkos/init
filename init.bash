@@ -50,9 +50,10 @@ unzip $MAVEN_FILE
 rm $MAVEN_FILE
 MAVEN_HOME=/opt/${MAVEN_FILE:0:-8}
 
-echo "MAVEN_HOME=$MAVEN_HOME" >> /etc/environment
-echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> /etc/environment
-source /etc/environment
+echo "MAVEN_HOME=$MAVEN_HOME" >> /etc/profile.d/mvn.sh
+echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> /etc/profile.d/mvn.sh
+echo "export PATH"
+source /etc/profile
 
 #browser
 apt-get -y install chromium-browser
