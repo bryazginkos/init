@@ -55,7 +55,7 @@ echo "PATH=\$PATH:\$MAVEN_HOME/bin" >> /etc/environment
 source /etc/environment
 
 #browser
-apt-get install chromium-browser
+apt-get -y install chromium-browser
 
 #changing keyboard layout (os freya bug)
 #gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
