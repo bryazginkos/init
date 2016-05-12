@@ -61,5 +61,8 @@ source /etc/profile
 #browser
 apt-get -y install chromium-browser
 
+#keepassx
+apt-get -y install keepassx
+
 #changing keyboard layout (os freya bug)
 gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
