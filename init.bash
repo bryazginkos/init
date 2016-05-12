@@ -84,6 +84,7 @@ apt-get -y install krita
 wget $SKYPE_URL
 SKYPE_FILE=$(basename $SKYPE_URL)
 dpkg -i $SKYPE_FILE
+rm $SKYPE_FILE 
 
 #changing keyboard layout (os freya bug)
 gsettings set org.pantheon.desktop.gala.keybindings switch-input-source "['<Alt>Shift_L', '<Alt>Shift_R', '<Shift>Alt_L', '<Shift>Alt_R']"
